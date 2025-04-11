@@ -1,0 +1,45 @@
+{
+  "name": "jupysenter",
+  "displayName": "Jupysenter",
+  "description": "Enables working with presenter tools by navigating notebook cells with PageUp/PageDown and scrolling them into view.",
+  "version": "1.0.0",
+  "author": "Fabian Woebbeking",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "activationEvents": [
+    "onNotebookOpen"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.focusNextCellAndScroll",
+        "title": "Focus Next Cell and Scroll"
+      },
+      {
+        "command": "extension.focusPreviousCellAndScroll",
+        "title": "Focus Previous Cell and Scroll"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "pagedown",
+        "command": "extension.focusNextCellAndScroll",
+        "when": "notebookEditorFocused"
+      },
+      {
+        "key": "pageup",
+        "command": "extension.focusPreviousCellAndScroll",
+        "when": "notebookEditorFocused"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.1",
+    "typescript": "^5.2.0"
+  }
+}

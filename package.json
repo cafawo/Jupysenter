@@ -4,6 +4,7 @@
   "description": "Enables working with presenter tools by navigating notebook cells with PageUp/PageDown and scrolling them into view.",
   "version": "1.0.0",
   "author": "Fabian Woebbeking",
+  "publisher": "woebbeking",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -41,5 +42,13 @@
   "devDependencies": {
     "@types/vscode": "^1.99.1",
     "typescript": "^5.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cafawo/Jupysenter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cafawo/Jupysenter/issues"
+  },
+  "homepage": "https://github.com/cafawo/Jupysenter#readme"
 }

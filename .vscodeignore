@@ -1,0 +1,19 @@
+# Ignore source files
+src/
+
+# Ignore TypeScript config
+tsconfig.json
+
+# Ignore development logs, IDE config, and Git
+.vscode/
+.vscode-test/
+.git/
+.gitignore
+npm-debug.log
+
+# Ignore node_modules 
+node_modules/
+
+# Ignore test files or anything not needed in the package
+**/*.test.ts
+**/__tests__/

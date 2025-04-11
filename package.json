@@ -8,6 +8,26 @@
   "engines": {
     "vscode": "^1.99.0"
   },
+  "categories": [
+    "Notebooks",
+    "Productivity",
+    "Education"
+  ],
+  "keywords": [
+    "jupyter",
+    "notebook",
+    "notebooks",
+    "presentation",
+    "teaching",
+    "education",
+    "classroom",
+    "slide",
+    "pageup",
+    "pagedown",
+    "navigation",
+    "cell navigation",
+    "vs code notebooks"
+  ],
   "activationEvents": [
     "onNotebookOpen"
   ],

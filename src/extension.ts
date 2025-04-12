@@ -7,6 +7,8 @@ export function activate(context: vscode.ExtensionContext) {
       return;
     }
 
+    await vscode.commands.executeCommand('notebook.cell.quitEdit');
+
     const selection = editor.selections[0];
     const currentIndex = selection?.start ?? 0;
     const cells = editor.notebook.getCells();
@@ -18,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
     editor.selections = [new vscode.NotebookRange(targetIndex, targetIndex)];
     editor.revealRange(
       new vscode.NotebookRange(targetIndex, targetIndex),
-      vscode.NotebookEditorRevealType.AtTop // changed from Default
+      vscode.NotebookEditorRevealType.AtTop
     );
   };
 

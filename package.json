@@ -1,8 +1,8 @@
 {
   "name": "jupysenter",
   "displayName": "Jupysenter",
-  "description": "Enables working with presenter tools by navigating notebook cells with PageUp/PageDown and scrolling them into view.",
-  "version": "1.0.1",
+  "description": "Jupysenter enhances the presentation of Jupyter Notebooks in VS Code by enabling smooth navigation using wireless presenter tools — ideal for teaching or presenting in lecture halls.",
+  "version": "1.0.3",
   "author": "Fabian Woebbeking",
   "publisher": "woebbeking",
   "engines": {
@@ -46,12 +46,12 @@
       {
         "key": "pagedown",
         "command": "extension.focusNextCellAndScroll",
-        "when": "notebookEditorFocused"
+        "when": "resourceExtname == .ipynb"
       },
       {
         "key": "pageup",
         "command": "extension.focusPreviousCellAndScroll",
-        "when": "notebookEditorFocused"
+        "when": "resourceExtname == .ipynb"
       }
     ]
   },

@@ -1,6 +1,6 @@
 # Jupysenter
 
-**Jupysenter** enhances the presentation of Jupyter Notebooks in VS Code by enabling smooth navigation using wireless presenter tools (like the Logitech R400) — ideal for teaching or presenting in lecture halls.
+**Jupysenter** enhances the presentation of Jupyter Notebooks in VS Code by enabling smooth navigation using wireless presenter tools — ideal for teaching or presenting in lecture halls.
 
 ---
 

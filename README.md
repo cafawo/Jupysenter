@@ -36,12 +36,12 @@ Example:
 # Plotting code (cell 1)
 fig = plt.figure()
 plt.plot([1, 2, 3])
-plt.close(fig)
+plt.close(fig)  # No need to open fig twice
 ```
 
 ```python
 # Display output (cell 2)
-plt.show(fig)
+plt.show(fig)  # Open fig in new cell
 ```
 
 

@@ -18,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
     editor.selections = [new vscode.NotebookRange(targetIndex, targetIndex)];
     editor.revealRange(
       new vscode.NotebookRange(targetIndex, targetIndex),
-      vscode.NotebookEditorRevealType.Default
+      vscode.NotebookEditorRevealType.AtTop // changed from Default
     );
   };
 

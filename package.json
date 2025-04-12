@@ -2,7 +2,7 @@
   "name": "jupysenter",
   "displayName": "Jupysenter",
   "description": "Enables working with presenter tools by navigating notebook cells with PageUp/PageDown and scrolling them into view.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Fabian Woebbeking",
   "publisher": "woebbeking",
   "engines": {

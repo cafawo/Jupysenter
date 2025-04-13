@@ -30,18 +30,17 @@ Because display space is limited, design your notebooks like slides:
 - Keep cells short and focused
 - Separate **code** and **output** into different cells to ensure visibility
 
-Example:
+For example, a code cell:
 
 ```python
-# Plotting code (cell 1)
 fig = plt.figure()
 plt.plot([1, 2, 3])
 plt.close(fig)  # No need to open fig twice
 ```
 
+Followed by a (separate) output/display cell:
 ```python
-# Display output (cell 2)
-plt.show(fig)  # Open fig in new cell
+display(fig)  # Open fig in new cell
 ```
 
 

@@ -1,6 +1,6 @@
 # Jupysenter
 
-**Jupysenter** enhances the presentation of Jupyter Notebooks in VS Code by enabling smooth navigation using wireless presenter tools — ideal for teaching or presenting in lecture halls.
+**Jupysenter** enhances the presentation of Jupyter Notebooks in VS Code by enabling smooth navigation using PageUp/PageDown keys — ideal for teaching or when using a wireless presenter.
 
 ---
 

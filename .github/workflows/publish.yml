@@ -1,0 +1,55 @@
+name: Publish Extension
+
+on:
+  push:
+    tags:
+      - 'v*'          # e.g. v1.0.5
+    branches:
+      - main          # only publish when the tag is pushed to main
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build (tsc)
+        run: npm run vscode:prepublish
+
+      - name: Install publishers
+        run: |
+          npm i -g @vscode/vsce
+          npm i -g ovsx
+          
+      - name: Package vsix
+        run: vsce package
+        # Produces jupysenter-<version>.vsix in repo root
+
+      - name: Upload artifact (vsix)
+        uses: actions/upload-artifact@v4
+        with:
+          name: vsix
+          path: ./*.vsix
+
+      - name: Publish to VS Marketplace
+        if: ${{ secrets.VSCE_TOKEN != '' }}
+        env:
+          VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
+        run: vsce publish --pat "$VSCE_TOKEN"
+
+      - name: Publish to Open VSX (optional)
+        if: ${{ secrets.OVSX_TOKEN != '' }}
+        env:
+          OVSX_TOKEN: ${{ secrets.OVSX_TOKEN }}
+        run: ovsx publish -p "$OVSX_TOKEN"

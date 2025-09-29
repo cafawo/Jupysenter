@@ -4,8 +4,6 @@ on:
   push:
     tags:
       - 'v*'          # e.g. v1.0.5
-    branches:
-      - main          # only publish when the tag is pushed to main
 
 jobs:
   build-and-publish:

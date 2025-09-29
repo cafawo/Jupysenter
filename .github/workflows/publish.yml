@@ -25,7 +25,12 @@ jobs:
           cache: 'npm'
 
       - name: Install deps
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ] || [ -f yarn.lock ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       - name: Build (tsc)
         run: npm run vscode:prepublish

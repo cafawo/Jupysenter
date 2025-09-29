@@ -2,7 +2,7 @@
   "name": "jupysenter",
   "displayName": "Jupysenter",
   "description": "Jupysenter enhances the presentation of Jupyter Notebooks in VS Code by enabling smooth navigation using PageUp/PageDown keys — ideal for teaching or when using a wireless presenter.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Fabian Woebbeking",
   "publisher": "woebbeking",
   "icon": "media/icon.png",

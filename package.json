@@ -53,6 +53,16 @@
         "key": "pageup",
         "command": "extension.focusPreviousCellAndScroll",
         "when": "resourceExtname == .ipynb"
+      },
+      {
+        "mac": "right",
+        "command": "extension.focusNextCellAndScroll",
+        "when": "notebookEditorFocused && !notebookCellEditorFocused && !inputFocus && resourceExtname == .ipynb"
+      },
+      {
+        "mac": "left",
+        "command": "extension.focusPreviousCellAndScroll",
+        "when": "notebookEditorFocused && !notebookCellEditorFocused && !inputFocus && resourceExtname == .ipynb"
       }
     ]
   },
